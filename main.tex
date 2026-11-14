@@ -1,0 +1,123 @@
+% Ege Üniversitesi FBE yüksek lisans tezi — ana dosya.
+% Derleme: latexmk main.tex   (ayarlar latexmkrc içinde: pdflatex + BibTeX)
+\documentclass[12pt,a4paper]{mythesis}
+
+\usepackage[utf8]{inputenc}
+\usepackage[turkish]{babel}
+\usepackage{amsmath,amsthm,amsfonts,amssymb}
+\usepackage{graphicx}
+\usepackage{rotating}
+\usepackage{longtable}
+\usepackage{lscape}
+\usepackage{indentfirst}
+\usepackage{fancyhdr}
+\usepackage{xkeyval}
+\usepackage{hyperref}
+\usepackage{natbib}
+\usepackage{url}
+\usepackage{afterpage}
+\usepackage{chngcntr}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[linesnumbered,boxed,lined,ruled,vlined]{algorithm2e}
+\usepackage{enumitem}
+\usetikzlibrary{positioning,arrows,calc}
+
+\hypersetup{hidelinks}          % bağlantılar tıklanır ama çerçeve görünmez
+\graphicspath{{figures/}}       % şekiller kod reposundan PDF olarak buraya gelir
+\addto\captionsturkish{\renewcommand{\refname}{KAYNAKLAR DİZİNİ}}
+
+\numberwithin{equation}{section}
+\counterwithin{figure}{section}
+\setlist{listparindent=\parindent, parsep=0pt}
+\def\emptyline{\vspace{11pt}}
+
+\makeatletter
+\renewcommand*\l@section{\@dottedtocline{1}{0em}{3em}}
+\renewcommand*\l@subsection{\@dottedtocline{2}{0em}{3em}}
+\renewcommand*\l@subsubsection{\@dottedtocline{3}{0em}{3em}}
+\makeatother
+
+\pagestyle{fancy}
+\fancyhead{}
+\renewcommand{\headrulewidth}{0.0pt}
+\renewcommand{\footrulewidth}{0.0pt}
+\chead{\thepage}
+\lfoot{}\cfoot{}\rfoot{}
+\hyphenpenalty=1000
+\tolerance=1000
+
+% Çift taraflı baskı için arkası boş sayfa. Şablon her ön bölümden sonra bunu koyuyor.
+% Kılavuz tek taraflıya izin veriyorsa yalnızca bu satır değişir.
+\newcommand{\bossayfa}{\newpage\thispagestyle{empty}\mbox{}\newpage}
+
+% ---- Kapak bilgileri (mythesis.cls bunları kapak sayfasına basar) ----
+\newcommand{\tezadi}{AZ ETİKETLİ TIBBİ GÖRÜNTÜLERDE TEMEL MODEL DESTEKLİ VERİMLİ ÖĞRENME}
+\newcommand{\tezadien}{FOUNDATION MODEL-ASSISTED EFFICIENT LEARNING ON MEDICAL IMAGES WITH LIMITED LABELS}
+\title{\textbf{\tezadi}\\[16pt]}
+\author{Sefa Samet SÜTÇÜ\\[14pt]}
+\advisor{Danışman: Dr. Öğr. Üyesi İsmail IRMAKÇI\\[12pt]}
+\kod{Bilgisayar Mühendisliği Anabilim Dalı}
+\bolum{Bilgisayar Mühendisliği Yüksek Lisans Programı\\[12pt]}
+\location{İzmir \\}
+\tarih{2027 \\}
+
+\begin{document}
+
+\begin{titlepage}
+\addcontentsline{toc}{section}{İÇ KAPAK}
+\pagenumbering{roman}
+\end{titlepage}
+\setcounter{page}{2}
+\maketitle
+
+\input{frontmatter/kabul}
+\input{frontmatter/etik}
+\input{frontmatter/ozet}
+\input{frontmatter/abstract}
+\input{frontmatter/onsoz}
+
+\addcontentsline{toc}{section}{İÇİNDEKİLER}
+\tableofcontents
+\bossayfa
+
+\addcontentsline{toc}{section}{ŞEKİLLER DİZİNİ}
+\begin{center}\textbf{ŞEKİLLER DİZİNİ}\end{center}
+\listoffigures
+\bossayfa
+
+\addcontentsline{toc}{section}{ÇİZELGELER DİZİNİ}
+\listoftables
+\bossayfa
+
+\input{frontmatter/simgeler}
+\bossayfa
+
+% ---- Ana metin: çift taraflı kenar boşlukları (iç 5 cm, dış 2 cm) ----
+\newgeometry{a4paper, twoside, top=4cm, inner=5cm, outer=2cm, bottom=2cm,
+  headheight=15pt, headsep=6mm, footnotesep=6mm, footskip=30mm - 1em}
+\newpage
+\pagenumbering{arabic}
+
+\input{chapters/01-giris}
+\input{chapters/02-literatur}
+\input{chapters/03-materyal-yontem}
+\input{chapters/04-bulgular}
+\input{chapters/05-tartisma}
+\input{chapters/06-sonuc}
+
+\newpage
+\thispagestyle{empty}\mbox{}
+\vspace*{-2.1cm}
+\setlength{\headsep}{1.5cm}
+\addcontentsline{toc}{section}{KAYNAKLAR DİZİNİ}
+\bibliographystyle{bibtez}
+\bibliography{references}
+
+\input{backmatter/tesekkur}
+\input{backmatter/ozgecmis}
+
+\label{lastpage}
+\end{document}

@@ -1,0 +1,23 @@
+# LaTeX derleme çıktıları
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.lot
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.dvi
+*.bak
+*.sav
+/main.pdf
+
+# Silinmeyi bekleyen dosyalar
+_to_delete/
+
+# İşletim sistemi
+.DS_Store
+Thumbs.db

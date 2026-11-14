@@ -1,0 +1,275 @@
+@article{abedeenFracAtlasDatasetFracture2023,
+  title = {{{FracAtlas}}: {{A Dataset}} for {{Fracture Classification}}, {{Localization}} and {{Segmentation}} of {{Musculoskeletal Radiographs}}},
+  shorttitle = {{{FracAtlas}}},
+  author = {Abedeen, Iftekharul and Rahman, Md. Ashiqur and Prottyasha, Fatema Zohra and Ahmed, Tasnim and Chowdhury, Tareque Mohmud and Shatabda, Swakkhar},
+  year = 2023,
+  month = aug,
+  journal = {Scientific Data},
+  volume = {10},
+  number = {1},
+  pages = {521},
+  issn = {2052-4463},
+  doi = {10.1038/s41597-023-02432-4},
+  urldate = {2026-11-14},
+  abstract = {Abstract             Digital radiography is one of the most common and cost-effective standards for the diagnosis of bone fractures. For such diagnoses expert intervention is required which is time-consuming and demands rigorous training. With the recent growth of computer vision algorithms, there is a surge of interest in computer-aided diagnosis. The development of algorithms demands large datasets with proper annotations. Existing X-Ray datasets are either small or lack proper annotation, which hinders the development of machine-learning algorithms and evaluation of the relative performance of algorithms for classification, localization, and segmentation. We present FracAtlas, a new dataset of X-Ray scans curated from the images collected from 3 major hospitals in Bangladesh. Our dataset includes 4,083 images that have been manually annotated for bone fracture classification, localization, and segmentation with the help of 2 expert radiologists and an orthopedist using the open-source labeling platform, makesense.ai. There are 717 images with 922 instances of fractures. Each of the fracture instances has its own mask and bounding box, whereas the scans also have global labels for classification tasks. We believe the dataset will be a valuable resource for researchers interested in developing and evaluating machine learning algorithms for bone fracture diagnosis.},
+  langid = {english},
+  file = {C:\Users\sefas\Zotero\storage\JWZ62GI9\Abedeen et al. - 2023 - FracAtlas A Dataset for Fracture Classification, Localization and Segmentation of Musculoskeletal R.pdf}
+}
+
+@misc{dettmersQLoRAEfficientFinetuning2023,
+  title = {{{QLoRA}}: {{Efficient Finetuning}} of {{Quantized LLMs}}},
+  shorttitle = {{{QLoRA}}},
+  author = {Dettmers, Tim and Pagnoni, Artidoro and Holtzman, Ari and Zettlemoyer, Luke},
+  year = 2023,
+  publisher = {arXiv},
+  doi = {10.48550/ARXIV.2305.14314},
+  urldate = {2026-11-14},
+  abstract = {We present QLoRA, an efficient finetuning approach that reduces memory usage enough to finetune a 65B parameter model on a single 48GB GPU while preserving full 16-bit finetuning task performance. QLoRA backpropagates gradients through a frozen, 4-bit quantized pretrained language model into Low Rank Adapters\textasciitilde (LoRA). Our best model family, which we name Guanaco, outperforms all previous openly released models on the Vicuna benchmark, reaching 99.3\% of the performance level of ChatGPT while only requiring 24 hours of finetuning on a single GPU. QLoRA introduces a number of innovations to save memory without sacrificing performance: (a) 4-bit NormalFloat (NF4), a new data type that is information theoretically optimal for normally distributed weights (b) double quantization to reduce the average memory footprint by quantizing the quantization constants, and (c) paged optimziers to manage memory spikes. We use QLoRA to finetune more than 1,000 models, providing a detailed analysis of instruction following and chatbot performance across 8 instruction datasets, multiple model types (LLaMA, T5), and model scales that would be infeasible to run with regular finetuning (e.g. 33B and 65B parameter models). Our results show that QLoRA finetuning on a small high-quality dataset leads to state-of-the-art results, even when using smaller models than the previous SoTA. We provide a detailed analysis of chatbot performance based on both human and GPT-4 evaluations showing that GPT-4 evaluations are a cheap and reasonable alternative to human evaluation. Furthermore, we find that current chatbot benchmarks are not trustworthy to accurately evaluate the performance levels of chatbots. A lemon-picked analysis demonstrates where Guanaco fails compared to ChatGPT. We release all of our models and code, including CUDA kernels for 4-bit training.},
+  copyright = {Creative Commons Attribution 4.0 International},
+  keywords = {FOS: Computer and information sciences,Machine Learning (cs.LG)}
+}
+
+@misc{geifmanSelectiveClassificationDeep2017,
+  title = {Selective {{Classification}} for {{Deep Neural Networks}}},
+  author = {Geifman, Yonatan and {El-Yaniv}, Ran},
+  year = 2017,
+  publisher = {arXiv},
+  doi = {10.48550/ARXIV.1705.08500},
+  urldate = {2026-11-14},
+  abstract = {Selective classification techniques (also known as reject option) have not yet been considered in the context of deep neural networks (DNNs). These techniques can potentially significantly improve DNNs prediction performance by trading-off coverage. In this paper we propose a method to construct a selective classifier given a trained neural network. Our method allows a user to set a desired risk level. At test time, the classifier rejects instances as needed, to grant the desired risk (with high probability). Empirical results over CIFAR and ImageNet convincingly demonstrate the viability of our method, which opens up possibilities to operate DNNs in mission-critical applications. For example, using our method an unprecedented 2\% error in top-5 ImageNet classification can be guaranteed with probability 99.9\%, and almost 60\% test coverage.},
+  copyright = {arXiv.org perpetual, non-exclusive license},
+  keywords = {Artificial Intelligence (cs.AI),FOS: Computer and information sciences,Machine Learning (cs.LG)}
+}
+
+@misc{guoCalibrationModernNeural2017,
+  title = {On {{Calibration}} of {{Modern Neural Networks}}},
+  author = {Guo, Chuan and Pleiss, Geoff and Sun, Yu and Weinberger, Kilian Q.},
+  year = 2017,
+  publisher = {arXiv},
+  doi = {10.48550/ARXIV.1706.04599},
+  urldate = {2026-11-14},
+  abstract = {Confidence calibration -- the problem of predicting probability estimates representative of the true correctness likelihood -- is important for classification models in many applications. We discover that modern neural networks, unlike those from a decade ago, are poorly calibrated. Through extensive experiments, we observe that depth, width, weight decay, and Batch Normalization are important factors influencing calibration. We evaluate the performance of various post-processing calibration methods on state-of-the-art architectures with image and document classification datasets. Our analysis and experiments not only offer insights into neural network learning, but also provide a simple and straightforward recipe for practical settings: on most datasets, temperature scaling -- a single-parameter variant of Platt Scaling -- is surprisingly effective at calibrating predictions.},
+  copyright = {arXiv.org perpetual, non-exclusive license},
+  keywords = {FOS: Computer and information sciences,Machine Learning (cs.LG)}
+}
+
+@article{hauptZeroshotMultimodalLarge2026,
+  title = {Zero-Shot Multimodal Large Language Models Underperform a Domain-Trained {{CNN}} Baseline in Pediatric Wrist Fracture Detection},
+  author = {Haupt, Matteo and Wei{\ss}, David and Bellersen, Tim and Maurer, Martin H.},
+  year = 2026,
+  month = jun,
+  journal = {Scientific Reports},
+  volume = {16},
+  number = {1},
+  pages = {18873},
+  issn = {2045-2322},
+  doi = {10.1038/s41598-026-58763-w},
+  urldate = {2026-11-14},
+  abstract = {Abstract             Multimodal large language models (LLMs) that process text and images are increasingly discussed for medical imaging, yet their diagnostic performance on radiographs remains poorly characterized. We evaluated three commercially available multimodal LLMs (GPT-4o, Claude 3.5 Sonnet, Gemini 1.5 Pro) in a strict zero-shot setting for pediatric wrist fracture detection and compared them with a domain-trained Inception v3 convolutional neural network (CNN) on the same GRAZPEDWRI-DX dataset. We constructed a balanced patient-level test cohort of 1,000 children (2,298 radiographs; 500 fracture, 500 non-fracture). The CNN achieved high diagnostic performance (AUROC 0.905, AUPRC 0.920), whereas all LLMs performed close to chance (accuracies\,{$<$}\,0.55, Matthews correlation coefficients\,{$\approx$}\,0) and produced bounding boxes often inconsistent with expert annotations. These findings indicate that, in a strict zero-shot setting, the three commercial multimodal LLMs evaluated here lack reliable diagnostic ability for pediatric wrist fracture detection and should therefore be regarded as exploratory research tools rather than clinically dependable systems for pediatric radiograph interpretation.},
+  langid = {english},
+  file = {C:\Users\sefas\Zotero\storage\KRXA6CD4\Haupt et al. - 2026 - Zero-shot multimodal large language models underperform a domain-trained CNN baseline in pediatric w.pdf}
+}
+
+@misc{heDeepResidualLearning2015,
+  title = {Deep {{Residual Learning}} for {{Image Recognition}}},
+  author = {He, Kaiming and Zhang, Xiangyu and Ren, Shaoqing and Sun, Jian},
+  year = 2015,
+  publisher = {arXiv},
+  doi = {10.48550/ARXIV.1512.03385},
+  urldate = {2026-11-14},
+  abstract = {Deeper neural networks are more difficult to train. We present a residual learning framework to ease the training of networks that are substantially deeper than those used previously. We explicitly reformulate the layers as learning residual functions with reference to the layer inputs, instead of learning unreferenced functions. We provide comprehensive empirical evidence showing that these residual networks are easier to optimize, and can gain accuracy from considerably increased depth. On the ImageNet dataset we evaluate residual nets with a depth of up to 152 layers---8x deeper than VGG nets but still having lower complexity. An ensemble of these residual nets achieves 3.57\% error on the ImageNet test set. This result won the 1st place on the ILSVRC 2015 classification task. We also present analysis on CIFAR-10 with 100 and 1000 layers. The depth of representations is of central importance for many visual recognition tasks. Solely due to our extremely deep representations, we obtain a 28\% relative improvement on the COCO object detection dataset. Deep residual nets are foundations of our submissions to ILSVRC \&amp; COCO 2015 competitions, where we also won the 1st places on the tasks of ImageNet detection, ImageNet localization, COCO detection, and COCO segmentation.},
+  copyright = {arXiv.org perpetual, non-exclusive license},
+  keywords = {Computer Vision and Pattern Recognition (cs.CV),FOS: Computer and information sciences}
+}
+
+@misc{hintonDistillingKnowledgeNeural2015,
+  title = {Distilling the {{Knowledge}} in a {{Neural Network}}},
+  author = {Hinton, Geoffrey and Vinyals, Oriol and Dean, Jeff},
+  year = 2015,
+  publisher = {arXiv},
+  doi = {10.48550/ARXIV.1503.02531},
+  urldate = {2026-11-14},
+  abstract = {A very simple way to improve the performance of almost any machine learning algorithm is to train many different models on the same data and then to average their predictions. Unfortunately, making predictions using a whole ensemble of models is cumbersome and may be too computationally expensive to allow deployment to a large number of users, especially if the individual models are large neural nets. Caruana and his collaborators have shown that it is possible to compress the knowledge in an ensemble into a single model which is much easier to deploy and we develop this approach further using a different compression technique. We achieve some surprising results on MNIST and we show that we can significantly improve the acoustic model of a heavily used commercial system by distilling the knowledge in an ensemble of models into a single model. We also introduce a new type of ensemble composed of one or more full models and many specialist models which learn to distinguish fine-grained classes that the full models confuse. Unlike a mixture of experts, these specialist models can be trained rapidly and in parallel.},
+  copyright = {arXiv.org perpetual, non-exclusive license},
+  keywords = {FOS: Computer and information sciences,Machine Learning (cs.LG),Machine Learning (stat.ML),Neural and Evolutionary Computing (cs.NE)}
+}
+
+@misc{howardSearchingMobileNetV32019,
+  title = {Searching for {{MobileNetV3}}},
+  author = {Howard, Andrew and Sandler, Mark and Chu, Grace and Chen, Liang-Chieh and Chen, Bo and Tan, Mingxing and Wang, Weijun and Zhu, Yukun and Pang, Ruoming and Vasudevan, Vijay and Le, Quoc V. and Adam, Hartwig},
+  year = 2019,
+  publisher = {arXiv},
+  doi = {10.48550/ARXIV.1905.02244},
+  urldate = {2026-11-14},
+  abstract = {We present the next generation of MobileNets based on a combination of complementary search techniques as well as a novel architecture design. MobileNetV3 is tuned to mobile phone CPUs through a combination of hardware-aware network architecture search (NAS) complemented by the NetAdapt algorithm and then subsequently improved through novel architecture advances. This paper starts the exploration of how automated search algorithms and network design can work together to harness complementary approaches improving the overall state of the art. Through this process we create two new MobileNet models for release: MobileNetV3-Large and MobileNetV3-Small which are targeted for high and low resource use cases. These models are then adapted and applied to the tasks of object detection and semantic segmentation. For the task of semantic segmentation (or any dense pixel prediction), we propose a new efficient segmentation decoder Lite Reduced Atrous Spatial Pyramid Pooling (LR-ASPP). We achieve new state of the art results for mobile classification, detection and segmentation. MobileNetV3-Large is 3.2\textbackslash\% more accurate on ImageNet classification while reducing latency by 15\textbackslash\% compared to MobileNetV2. MobileNetV3-Small is 4.6\textbackslash\% more accurate while reducing latency by 5\textbackslash\% compared to MobileNetV2. MobileNetV3-Large detection is 25\textbackslash\% faster at roughly the same accuracy as MobileNetV2 on COCO detection. MobileNetV3-Large LR-ASPP is 30\textbackslash\% faster than MobileNetV2 R-ASPP at similar accuracy for Cityscapes segmentation.},
+  copyright = {arXiv.org perpetual, non-exclusive license},
+  keywords = {Computer Vision and Pattern Recognition (cs.CV),FOS: Computer and information sciences}
+}
+
+@misc{huLoRALowRankAdaptation2021,
+  title = {{{LoRA}}: {{Low-Rank Adaptation}} of {{Large Language Models}}},
+  shorttitle = {{{LoRA}}},
+  author = {Hu, Edward J. and Shen, Yelong and Wallis, Phillip and {Allen-Zhu}, Zeyuan and Li, Yuanzhi and Wang, Shean and Wang, Lu and Chen, Weizhu},
+  year = 2021,
+  publisher = {arXiv},
+  doi = {10.48550/ARXIV.2106.09685},
+  urldate = {2026-11-14},
+  abstract = {An important paradigm of natural language processing consists of large-scale pre-training on general domain data and adaptation to particular tasks or domains. As we pre-train larger models, full fine-tuning, which retrains all model parameters, becomes less feasible. Using GPT-3 175B as an example -- deploying independent instances of fine-tuned models, each with 175B parameters, is prohibitively expensive. We propose Low-Rank Adaptation, or LoRA, which freezes the pre-trained model weights and injects trainable rank decomposition matrices into each layer of the Transformer architecture, greatly reducing the number of trainable parameters for downstream tasks. Compared to GPT-3 175B fine-tuned with Adam, LoRA can reduce the number of trainable parameters by 10,000 times and the GPU memory requirement by 3 times. LoRA performs on-par or better than fine-tuning in model quality on RoBERTa, DeBERTa, GPT-2, and GPT-3, despite having fewer trainable parameters, a higher training throughput, and, unlike adapters, no additional inference latency. We also provide an empirical investigation into rank-deficiency in language model adaptation, which sheds light on the efficacy of LoRA. We release a package that facilitates the integration of LoRA with PyTorch models and provide our implementations and model checkpoints for RoBERTa, DeBERTa, and GPT-2 at https://github.com/microsoft/LoRA.},
+  copyright = {arXiv.org perpetual, non-exclusive license},
+  keywords = {Artificial Intelligence (cs.AI),Computation and Language (cs.CL),FOS: Computer and information sciences,Machine Learning (cs.LG)}
+}
+
+@misc{jitkrittumWhenDoesConfidenceBased2023,
+  title = {When {{Does Confidence-Based Cascade Deferral Suffice}}?},
+  author = {Jitkrittum, Wittawat and Gupta, Neha and Menon, Aditya Krishna and Narasimhan, Harikrishna and Rawat, Ankit Singh and Kumar, Sanjiv},
+  year = 2023,
+  publisher = {arXiv},
+  doi = {10.48550/ARXIV.2307.02764},
+  urldate = {2026-11-14},
+  abstract = {Cascades are a classical strategy to enable inference cost to vary adaptively across samples, wherein a sequence of classifiers are invoked in turn. A deferral rule determines whether to invoke the next classifier in the sequence, or to terminate prediction. One simple deferral rule employs the confidence of the current classifier, e.g., based on the maximum predicted softmax probability. Despite being oblivious to the structure of the cascade -- e.g., not modelling the errors of downstream models -- such confidence-based deferral often works remarkably well in practice. In this paper, we seek to better understand the conditions under which confidence-based deferral may fail, and when alternate deferral strategies can perform better. We first present a theoretical characterisation of the optimal deferral rule, which precisely characterises settings under which confidence-based deferral may suffer. We then study post-hoc deferral mechanisms, and demonstrate they can significantly improve upon confidence-based deferral in settings where (i) downstream models are specialists that only work well on a subset of inputs, (ii) samples are subject to label noise, and (iii) there is distribution shift between the train and test set.},
+  copyright = {Creative Commons Attribution 4.0 International},
+  keywords = {FOS: Computer and information sciences,Machine Learning (cs.LG),Machine Learning (stat.ML)}
+}
+
+@misc{kimGeneralizableLargescaleFoundation2026,
+  title = {A Generalizable Large-Scale Foundation Model for Musculoskeletal Radiographs},
+  author = {Kim, Shinn and Lee, Soobin and Shin, Kyoungseob and Kim, Han-Soo and Kim, Yongsung and Kim, Minsu and Nam, Juhong and Ko, Somang and Kwon, Daeheon and Huh, Wook and Han, Ilkyu and Kwon, Sunghoon},
+  year = 2026,
+  publisher = {arXiv},
+  doi = {10.48550/ARXIV.2602.03076},
+  urldate = {2026-11-14},
+  abstract = {Artificial intelligence (AI) has shown promise in detecting and characterizing musculoskeletal diseases from radiographs. However, most existing models remain task-specific, annotation-dependent, and limited in generalizability across diseases and anatomical regions. Although a generalizable foundation model trained on large-scale musculoskeletal radiographs is clinically needed, publicly available datasets remain limited in size and lack sufficient diversity to enable training across a wide range of musculoskeletal conditions and anatomical sites. Here, we present SKELEX, a large-scale foundation model for musculoskeletal radiographs, trained using self-supervised learning on 1.2 million diverse, condition-rich images. The model was evaluated on 12 downstream diagnostic tasks and generally outperformed baselines in fracture detection, osteoarthritis grading, and bone tumor classification. Furthermore, SKELEX demonstrated zero-shot abnormality localization, producing error maps that identified pathologic regions without task-specific training. Building on this capability, we developed an interpretable, region-guided model for predicting bone tumors, which maintained robust performance on independent external datasets and was deployed as a publicly accessible web application. Overall, SKELEX provides a scalable, label-efficient, and generalizable AI framework for musculoskeletal imaging, establishing a foundation for both clinical translation and data-efficient research in musculoskeletal radiology.},
+  copyright = {arXiv.org perpetual, non-exclusive license},
+  keywords = {Computer Vision and Pattern Recognition (cs.CV),FOS: Computer and information sciences}
+}
+
+@article{kimLargescaleVisionFoundation2026,
+  title = {A Large-Scale Vision Foundation Model for Musculoskeletal Radiographs},
+  author = {Kim, Shinn and Lee, Soobin and Shin, Kyoungseob and Kim, Han-Soo and Kim, Yongsung and Kim, Minsu and Nam, Juhong and Ko, Somang and Kwon, Daeheon and Huh, Wook and Han, Ilkyu and Kwon, Sunghoon},
+  year = 2026,
+  month = jun,
+  journal = {NPJ Digital Medicine},
+  volume = {9},
+  pages = {668},
+  issn = {2398-6352},
+  doi = {10.1038/s41746-026-02826-9},
+  urldate = {2026-11-14},
+  abstract = {Artificial intelligence (AI) has shown promise in detecting and characterizing musculoskeletal diseases from radiographs. However, most existing models remain task-specific, annotation-dependent, and limited in their adaptability across diseases and anatomical regions. Although a comprehensive foundation model trained on large-scale musculoskeletal radiographs is clinically needed, publicly available datasets remain limited in size and lack sufficient diversity to enable training across a wide range of musculoskeletal conditions and anatomical sites. Here, we present SKELEX, a large-scale foundation model for musculoskeletal radiographs, trained using self-supervised learning on 1.2 million diverse, condition-rich images. The model was evaluated on 12 downstream diagnostic tasks and generally outperformed baselines in fracture detection, osteoarthritis grading, and bone tumor classification. Furthermore, SKELEX demonstrated unsupervised reconstruction-based anomaly localization, producing error maps that identified pathologic regions without task-specific training. Building on this capability, we developed an interpretable, region-guided bone tumor classifier. This model maintained robust performance on independent external datasets and was deployed as a publicly accessible web application, serving as a proof of concept for its potential clinical translation. Overall, SKELEX provides a scalable, label-efficient, and broadly applicable AI framework for musculoskeletal radiographs, with its robust external validity specifically demonstrated in bone tumor applications.},
+  pmcid = {PMC13526867},
+  pmid = {42230902},
+  file = {C:\Users\sefas\Zotero\storage\JYPU98PA\Kim et al. - 2026 - A large-scale vision foundation model for musculoskeletal radiographs.pdf}
+}
+
+@misc{liATCXRUncertaintyAwareAgentic2025,
+  title = {{{AT-CXR}}: {{Uncertainty-Aware Agentic Triage}} for {{Chest X}}-Rays},
+  shorttitle = {{{AT-CXR}}},
+  author = {Li, Xueyang and Jiang, Mingze and Xu, Gelei and Xia, Jun and Jia, Mengzhao and Chen, Danny and Shi, Yiyu},
+  year = 2025,
+  publisher = {arXiv},
+  doi = {10.48550/ARXIV.2508.19322},
+  urldate = {2026-11-14},
+  abstract = {Agentic AI is advancing rapidly, yet truly autonomous medical-imaging triage, where a system decides when to stop, escalate, or defer under real constraints, remains relatively underexplored. To address this gap, we introduce AT-CXR, an uncertainty-aware agent for chest X-rays. The system estimates per-case confidence and distributional fit, then follows a stepwise policy to issue an automated decision or abstain with a suggested label for human intervention. We evaluate two router designs that share the same inputs and actions: a deterministic rule-based router and an LLM-decided router. Across five-fold evaluation on a balanced subset of NIH ChestX-ray14 dataset, both variants outperform strong zero-shot vision-language models and state-of-the-art supervised classifiers, achieving higher full-coverage accuracy and superior selective-prediction performance, evidenced by a lower area under the risk-coverage curve (AURC) and a lower error rate at high coverage, while operating with lower latency that meets practical clinical constraints. The two routers provide complementary operating points, enabling deployments to prioritize maximal throughput or maximal accuracy. Our code is available at https://github.com/XLIAaron/uncertainty-aware-cxr-agent.},
+  copyright = {arXiv.org perpetual, non-exclusive license},
+  keywords = {Artificial Intelligence (cs.AI),Computer Vision and Pattern Recognition (cs.CV),FOS: Computer and information sciences,FOS: Electrical engineering electronic engineering information engineering,Image and Video Processing (eess.IV)}
+}
+
+@article{moorFoundationModelsGeneralist2023,
+  title = {Foundation Models for Generalist Medical Artificial Intelligence},
+  author = {Moor, Michael and Banerjee, Oishi and Abad, Zahra Shakeri Hossein and Krumholz, Harlan M. and Leskovec, Jure and Topol, Eric J. and Rajpurkar, Pranav},
+  year = 2023,
+  month = apr,
+  journal = {Nature},
+  volume = {616},
+  number = {7956},
+  pages = {259--265},
+  issn = {0028-0836, 1476-4687},
+  doi = {10.1038/s41586-023-05881-4},
+  urldate = {2026-11-14},
+  langid = {english}
+}
+
+@misc{mozannarConsistentEstimatorsLearning2020,
+  title = {Consistent {{Estimators}} for {{Learning}} to {{Defer}} to an {{Expert}}},
+  author = {Mozannar, Hussein and Sontag, David},
+  year = 2020,
+  publisher = {arXiv},
+  doi = {10.48550/ARXIV.2006.01862},
+  urldate = {2026-11-14},
+  abstract = {Learning algorithms are often used in conjunction with expert decision makers in practical scenarios, however this fact is largely ignored when designing these algorithms. In this paper we explore how to learn predictors that can either predict or choose to defer the decision to a downstream expert. Given only samples of the expert's decisions, we give a procedure based on learning a classifier and a rejector and analyze it theoretically. Our approach is based on a novel reduction to cost sensitive learning where we give a consistent surrogate loss for cost sensitive learning that generalizes the cross entropy loss. We show the effectiveness of our approach on a variety of experimental tasks.},
+  copyright = {arXiv.org perpetual, non-exclusive license},
+  keywords = {FOS: Computer and information sciences,Human-Computer Interaction (cs.HC),Machine Learning (cs.LG),Machine Learning (stat.ML)}
+}
+
+@article{nagyPediatricWristTrauma2022,
+  title = {A Pediatric Wrist Trauma {{X}}-Ray Dataset ({{GRAZPEDWRI-DX}}) for Machine Learning},
+  author = {Nagy, Eszter and Janisch, Michael and Hr{\v z}i{\'c}, Franko and Sorantin, Erich and Tschauner, Sebastian},
+  year = 2022,
+  month = may,
+  journal = {Scientific Data},
+  volume = {9},
+  number = {1},
+  pages = {222},
+  issn = {2052-4463},
+  doi = {10.1038/s41597-022-01328-z},
+  urldate = {2026-11-14},
+  abstract = {Abstract             Digital radiography is widely available and the standard modality in trauma imaging, often enabling to diagnose pediatric wrist fractures. However, image interpretation requires time-consuming specialized training. Due to astonishing progress in computer vision algorithms, automated fracture detection has become a topic of research interest. This paper presents the GRAZPEDWRI-DX dataset containing annotated pediatric trauma wrist radiographs of 6,091 patients, treated at the Department for Pediatric Surgery of the University Hospital Graz between 2008 and 2018. A total number of 10,643 studies (20,327 images) are made available, typically covering posteroanterior and lateral projections. The dataset is annotated with 74,459 image tags and features 67,771 labeled objects. We de-identified all radiographs and converted the DICOM pixel data to 16-Bit grayscale PNG images. The filenames and the accompanying text files provide basic patient information (age, sex). Several pediatric radiologists annotated dataset images by placing lines, bounding boxes, or polygons to mark pathologies like fractures or periosteal reactions. They also tagged general image characteristics. This dataset is publicly available to encourage computer vision research.},
+  langid = {english},
+  file = {C:\Users\sefas\Zotero\storage\NP2K8848\Nagy et al. - 2022 - A pediatric wrist trauma X-ray dataset (GRAZPEDWRI-DX) for machine learning.pdf}
+}
+
+@article{perez-garciaExploringScalableMedical2025,
+  title = {Exploring Scalable Medical Image Encoders beyond Text Supervision},
+  author = {{P{\'e}rez-Garc{\'i}a}, Fernando and Sharma, Harshita and {Bond-Taylor}, Sam and Bouzid, Kenza and Salvatelli, Valentina and Ilse, Maximilian and Bannur, Shruthi and Castro, Daniel C. and Schwaighofer, Anton and Lungren, Matthew P. and Wetscherek, Maria Teodora and Codella, Noel and Hyland, Stephanie L. and {Alvarez-Valle}, Javier and Oktay, Ozan},
+  year = 2025,
+  month = jan,
+  journal = {Nature Machine Intelligence},
+  volume = {7},
+  number = {1},
+  pages = {119--130},
+  issn = {2522-5839},
+  doi = {10.1038/s42256-024-00965-w},
+  urldate = {2026-11-14},
+  langid = {english},
+  file = {C:\Users\sefas\Zotero\storage\XHEPHTHY\Pérez-García et al. - 2025 - Exploring scalable medical image encoders beyond text supervision.pdf}
+}
+
+@article{renMedAlmightyEnhancingDisease2025,
+  title = {{{MedAlmighty}}: Enhancing Disease Diagnosis with Large Vision Model Distillation},
+  shorttitle = {{{MedAlmighty}}},
+  author = {Ren, Yajing and Gu, Zheng and Liu, Wen},
+  year = 2025,
+  month = aug,
+  journal = {Frontiers in Artificial Intelligence},
+  volume = {8},
+  pages = {1527980},
+  issn = {2624-8212},
+  doi = {10.3389/frai.2025.1527980},
+  urldate = {2026-11-14},
+  abstract = {Introduction               Accurate disease diagnosis is critical in the medical field, yet it remains a challenging task due to the limited, heterogeneous, and complex nature of medical data. These challenges are particularly pronounced in multimodal tasks requiring the integration of diverse data sources. While lightweight models offer computational efficiency, they often lack the comprehensive understanding necessary for reliable clinical predictions. Conversely, large vision models, trained on extensive general-domain datasets, provide strong generalization but fall short in specialized medical applications due to domain mismatch and limited medical data availability.                                         Methods               To bridge the gap between general and specialized performance, we propose MedAlmighty, a knowledge distillation-based framework that synergizes the strengths of both large and small models. In this approach, we utilize DINOv2---a pre-trained large vision model---as a frozen teacher, and a lightweight convolutional neural network (CNN) as the trainable student. The student model is trained using both hard labels from the ground truth and soft targets generated by the teacher model. We adopt a hybrid loss function that combines cross-entropy loss (for classification accuracy) and Kullback-Leibler divergence (for distillation), enabling the student model to capture rich semantic features while remaining efficient and domain-aware.                                         Results               Experimental evaluations reveal that MedAlmighty significantly improves disease diagnosis performance across datasets characterized by sparse and diverse medical data. The proposed model outperforms baselines by effectively integrating the generalizable representations of large models with the specialized knowledge from smaller models. The results confirm improved robustness and accuracy in complex diagnostic scenarios.                                         Discussion               The MedAlmighty framework demonstrates that incorporating general-domain representations via frozen large vision models---when guided by task-specific distillation strategies---can enhance the performance of lightweight medical models. This approach offers a promising solution to data scarcity and domain gap issues in medical imaging. Future work may explore extending this distillation strategy to other medical modalities and incorporating multimodal alignment for even richer representation learning.},
+  file = {C:\Users\sefas\Zotero\storage\XN33T2PL\Ren et al. - 2025 - MedAlmighty enhancing disease diagnosis with large vision model distillation.pdf}
+}
+
+@misc{sellergrenMedGemmaTechnicalReport2026,
+  title = {{{MedGemma Technical Report}}},
+  author = {Sellergren, Andrew and Kazemzadeh, Sahar and Jaroensri, Tiam and Kiraly, Atilla and Traverse, Madeleine and Kohlberger, Timo and Xu, Shawn and Jamil, Fayaz and Hughes, C{\'i}an and Lau, Charles and Chen, Justin and Mahvar, Fereshteh and Yatziv, Liron and Chen, Tiffany and Sterling, Bram and Baby, Stefanie Anna and Baby, Susanna Maria and Lai, Jeremy and Schmidgall, Samuel and Yang, Lu and Chen, Kejia and Bjornsson, Per and Reddy, Shashir and Brush, Ryan and Philbrick, Kenneth and Asiedu, Mercy and Mezerreg, Ines and Hu, Howard and Yang, Howard and Tiwari, Richa and Jansen, Sunny and Singh, Preeti and Liu, Yun and Azizi, Shekoofeh and Kamath, Aishwarya and Ferret, Johan and Pathak, Shreya and Vieillard, Nino and Merhej, Ramona and Perrin, Sarah and Matejovicova, Tatiana and Ram{\'e}, Alexandre and Riviere, Morgane and Rouillard, Louis and Mesnard, Thomas and Cideron, Geoffrey and Grill, Jean-bastien and Ramos, Sabela and Yvinec, Edouard and Casbon, Michelle and Buchatskaya, Elena and Alayrac, Jean-Baptiste and Lepikhin, Dmitry and Feinberg, Vlad and Borgeaud, Sebastian and Andreev, Alek and Hardin, Cassidy and Dadashi, Robert and Hussenot, L{\'e}onard and Joulin, Armand and Bachem, Olivier and Matias, Yossi and Chou, Katherine and Hassidim, Avinatan and Goel, Kavi and Farabet, Clement and Barral, Joelle and Warkentin, Tris and Shlens, Jonathon and Fleet, David and Cotruta, Victor and Sanseviero, Omar and Martins, Gus and Kirk, Phoebe and Rao, Anand and Shetty, Shravya and Steiner, David F. and Kirmizibayrak, Can and Pilgrim, Rory and Golden, Daniel and Yang, Lin},
+  year = 2026,
+  month = nov,
+  publisher = {arXiv},
+  doi = {10.48550/ARXIV.2507.05201},
+  urldate = {2026-11-14},
+  abstract = {Artificial intelligence (AI) has significant potential in healthcare applications, but its training and deployment faces challenges due to healthcare's diverse data, complex tasks, and the need to preserve privacy. Foundation models that perform well on medical tasks and require less task-specific tuning data are critical to accelerate the development of healthcare AI applications. We introduce MedGemma, a collection of medical vision-language foundation models based on Gemma 3 4B and 27B. MedGemma demonstrates advanced medical understanding and reasoning on images and text, significantly exceeding the performance of similar-sized generative models and approaching the performance of task-specific models, while maintaining the general capabilities of the Gemma 3 base models. For out-of-distribution tasks, MedGemma achieves 2.6-10\% improvement on medical multimodal question answering, 15.5-18.1\% improvement on chest X-ray finding classification, and 10.8\% improvement on agentic evaluations compared to the base models. Fine-tuning MedGemma further improves performance in subdomains, reducing errors in electronic health record information retrieval by 50\% and reaching comparable performance to existing specialized state-of-the-art methods for pneumothorax classification and histopathology patch classification. We additionally introduce MedSigLIP, a medically-tuned vision encoder derived from SigLIP. MedSigLIP powers the visual understanding capabilities of MedGemma and as an encoder achieves comparable or better performance than specialized medical image encoders. Taken together, the MedGemma collection provides a strong foundation of medical image and text capabilities, with potential to significantly accelerate medical research and development of downstream applications. The MedGemma collection, including tutorials and model weights, can be found at https://goo.gle/medgemma.},
+  copyright = {Creative Commons Attribution 4.0 International},
+  keywords = {Artificial Intelligence (cs.AI),Computation and Language (cs.CL),Computer Vision and Pattern Recognition (cs.CV),FOS: Computer and information sciences}
+}
+
+@misc{xieSelftrainingNoisyStudent2019,
+  title = {Self-Training with {{Noisy Student}} Improves {{ImageNet}} Classification},
+  author = {Xie, Qizhe and Luong, Minh-Thang and Hovy, Eduard and Le, Quoc V.},
+  year = 2019,
+  publisher = {arXiv},
+  doi = {10.48550/ARXIV.1911.04252},
+  urldate = {2026-11-14},
+  abstract = {We present Noisy Student Training, a semi-supervised learning approach that works well even when labeled data is abundant. Noisy Student Training achieves 88.4\% top-1 accuracy on ImageNet, which is 2.0\% better than the state-of-the-art model that requires 3.5B weakly labeled Instagram images. On robustness test sets, it improves ImageNet-A top-1 accuracy from 61.0\% to 83.7\%, reduces ImageNet-C mean corruption error from 45.7 to 28.3, and reduces ImageNet-P mean flip rate from 27.8 to 12.2. Noisy Student Training extends the idea of self-training and distillation with the use of equal-or-larger student models and noise added to the student during learning. On ImageNet, we first train an EfficientNet model on labeled images and use it as a teacher to generate pseudo labels for 300M unlabeled images. We then train a larger EfficientNet as a student model on the combination of labeled and pseudo labeled images. We iterate this process by putting back the student as the teacher. During the learning of the student, we inject noise such as dropout, stochastic depth, and data augmentation via RandAugment to the student so that the student generalizes better than the teacher. Models are available at https://github.com/tensorflow/tpu/tree/master/models/official/efficientnet. Code is available at https://github.com/google-research/noisystudent.},
+  copyright = {arXiv.org perpetual, non-exclusive license},
+  keywords = {Computer Vision and Pattern Recognition (cs.CV),FOS: Computer and information sciences,Machine Learning (cs.LG),Machine Learning (stat.ML)}
+}
